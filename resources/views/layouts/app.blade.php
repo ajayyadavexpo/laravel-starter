@@ -22,9 +22,36 @@
         
             @include('layouts.sidebar');
 
-            <div class="flex-1 flex flex-col overflow-hidden">
+            <div class="flex-1 flex flex-col overflow-scroll">
 
                     @include('layouts.header')
+
+                    @if(\Session::has('success'))
+                        <div class="text-green-600 pt-5 pl-5">
+                            <ul>
+                                <li>{!! \Session::get('success') !!}</li>
+                            </ul>
+                        </div>
+                    @endif
+                    
+                    @if(\Session::has('error'))
+                        <div class="text-green-600 pt-5 pl-5">
+                            <ul>
+                                <li>{!! \Session::get('error') !!}</li>
+                            </ul>
+                        </div>
+                    @endif
+
+                    @if ($errors->any())
+                        <div class="text-red-600  pt-5 pl-5">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
                     {{ $slot }}
                     
             </div>

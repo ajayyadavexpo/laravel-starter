@@ -20,6 +20,9 @@ module.exports = {
             opacity: ['disabled'],
         },
     },
+    experimental: {
+        applyComplexClasses: true,
+    },
 
     plugins: [require('@tailwindcss/forms')],
 };

@@ -22,8 +22,6 @@ Route::get('/dashboard', function () {
 })->middleware(['front'])->name('dashboard');
 
 
-
-
 require __DIR__.'/front_auth.php';
 
 // Admin routes
@@ -32,3 +30,14 @@ Route::get('/admin/dashboard', function () {
 })->middleware(['auth'])->name('admin.dashboard');
 
 require __DIR__.'/auth.php';
+
+
+
+
+Route::namespace('App\Http\Controllers\Admin')->name('admin.')->prefix('admin')
+    ->group(function(){
+        Route::resource('roles','RoleController');
+        Route::resource('permissions','PermissionController');
+        Route::resource('users','UserController');
+        Route::resource('posts','PostController');
+});
