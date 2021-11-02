@@ -3,5 +3,5 @@
 @import 'tailwindcss/utilities';
 
 .active {
-  @apply bg-white rounded-l-lg;
+  @apply bg-gray-200 rounded-l-lg;
 }

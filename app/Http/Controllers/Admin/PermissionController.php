@@ -18,7 +18,7 @@ class PermissionController extends Controller
      */
     function __construct()
     {
-        $this->middleware('role_or_permission:Permission access|Permission add|Permission edit|Permission delete', ['only' => ['index','show']]);
+        $this->middleware('role_or_permission:Permission access|Permission create|Permission edit|Permission delete', ['only' => ['index','show']]);
         $this->middleware('role_or_permission:Permission create', ['only' => ['create','store']]);
         $this->middleware('role_or_permission:Permission edit', ['only' => ['edit','update']]);
         $this->middleware('role_or_permission:Permission delete', ['only' => ['destroy']]);

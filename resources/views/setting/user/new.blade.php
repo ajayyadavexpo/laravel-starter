@@ -22,14 +22,14 @@
                 
                 <div class="flex flex-col space-y-2">
                     <label for="password" class="text-gray-700 select-none font-medium">Password</label>
-                    <input id="password" type="text" name="password" value="{{ old('password') }}"
+                    <input id="password" type="password" name="password" value="{{ old('password') }}"
                       placeholder="Enter password" class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
                     />
                 </div>
                 
                 <div class="flex flex-col space-y-2">
                     <label for="password_confirmation" class="text-gray-700 select-none font-medium">Confirm Password</label>
-                    <input id="password_confirmation" type="text" name="password_confirmation" placeholder="Re-enter password" class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    <input id="password_confirmation" type="password" name="password_confirmation" placeholder="Re-enter password" class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
                     />
                 </div>
 
