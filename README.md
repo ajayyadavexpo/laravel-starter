@@ -13,7 +13,7 @@
 
 # Admin Dashboard page
 
-![alt text](https://github.com/AjayYadavAi/Laravel8Vuejs3/blob/main/admin-dashboard.png?raw=true)
+![alt text](https://github.com/AjayYadavAi/laravel-starter/blob/main/admin-dashboard.png?raw=true)
 
 
 
