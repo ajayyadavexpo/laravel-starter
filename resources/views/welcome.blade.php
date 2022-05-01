@@ -1,132 +1,136 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<x-front-guest-layout>
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
+    <div class="fixed bottom-0 left-0 right-0 z-40 px-4 py-2 text-center text-gray-500 bg-gray-900">
+        This a example landing page by TailwindComponents. Desing by Freepik.
+        <a class="text-gray-400 underline" href="https://tailwindcomponents.com/component/teamwork-page">Component details</a>
+    </div>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap" rel="stylesheet">
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth('front')
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+<main class="bg-white font-montserrat">
+    <header class="h-24 sm:h-32 flex items-center">
+        <div class="container mx-auto px-6 sm:px-12 flex items-center justify-between">
+            <div class="text-black font-black text-2xl flex items-center">
+                <span class="w-6 h-6 rounded-full bg-blue-500 mr-4"></span> Company Name
+            </div>
+            <div class="flex items-center">
+                <nav class="text-black text-lg hidden lg:flex items-center">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
+                    @if(Route::has('admin.login'))
+                            <a href="{{ route('admin.login') }}" class="py-2 px-6 flex hover:text-blue-500">Admin</a>
+
+                    @endif
+
+                    @if (Route::has('login'))
+                        @auth('front')
+                            <a href="{{ url('/dashboard') }}" class="py-2 px-6 flex hover:text-blue-500">Dashboard</a>
+                        @else
+                            <a href="{{ route('login') }}" class="py-2 px-6 flex hover:text-blue-500">Log in</a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="ml-4 py-2 px-6 flex hover:text-blue-500">Register</a>
+                            @endif
+                        @endauth
+                    @endif
+                </nav>
+                <button class="lg:hidden flex flex-col">
+                    <span class="w-6 h-px bg-gray-900 mb-1"></span>
+                    <span class="w-6 h-px bg-gray-900 mb-1"></span>
+                    <span class="w-6 h-px bg-gray-900 mb-1"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">
+        <div class="sm:w-2/5 flex flex-col items-start mt-8 sm:mt-0">
+            <h1 class="text-4xl lg:text-6xl leading-none mb-4"><strong class="font-black">Team Work</strong> Process</h1>
+            <p class="lg:text-lg mb-4 sm:mb-12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
+            <a href="#" class="font-semibold text-lg bg-blue-500 hover:bg-blue-400 text-white py-3 px-10 rounded-full">Learn more</a>
+        </div>
+        <div class="sm:w-3/5">
+            <svg class="w-full" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.6 270.58"><path d="M329.44 142.22A142.22 142.22 0 1098.1 253.05h178.23a141.94 141.94 0 0053.11-110.83z" fill="#ededec"/><path d="M167.18 226.41h33.89v11.92a14.31 14.31 0 01-14.31 14.31h-5.27a14.31 14.31 0 01-14.31-14.31v-11.92z" fill="#252527"/><path d="M157.25 189.58h54v39.18a10.77 10.77 0 01-10.77 10.77H168a10.77 10.77 0 01-10.77-10.77v-39.18h.02z" fill="#a098a2"/><path d="M211.46 212.63H156.7a6.52 6.52 0 01-6.51-6.51 6.51 6.51 0 016.51-6.51h54.76a6.5 6.5 0 016.51 6.51 6.51 6.51 0 01-6.51 6.51z" fill="#bdb6bf"/><path d="M178.65 212.63h-11.47a6.51 6.51 0 01-6.51-6.51 6.5 6.5 0 016.51-6.51h11.47a6.51 6.51 0 016.51 6.51 6.52 6.52 0 01-6.51 6.51z" fill="#d8d3d8"/><path d="M211.46 232.36H156.7a6.51 6.51 0 01-6.51-6.51 6.52 6.52 0 016.51-6.51h54.76a6.51 6.51 0 016.51 6.51 6.5 6.5 0 01-6.51 6.51z" fill="#bdb6bf"/><path d="M173.24 232.36h-.66a6.51 6.51 0 01-6.51-6.51 6.52 6.52 0 016.51-6.51h.66a6.51 6.51 0 016.51 6.51 6.5 6.5 0 01-6.51 6.51z" fill="#d8d3d8"/><path d="M261.15 100.06c0-39.23-34.4-71-76.85-71s-76.85 31.8-76.85 71c0 23.51 12.36 44.34 31.4 57.27s8.93 4.91 9.92 18.22v9.56c0 4.48 3.93 8.12 8.79 8.12h53.61c4.86 0 8.79-3.64 8.79-8.12v-9.65c1-13.25 9.75-18.08 9.75-18.08 19.06-12.93 31.44-33.79 31.44-57.32z" fill="#e5bf47"/><circle cx="185.19" cy="106.73" r="55.52" transform="rotate(-77.7 185.17293 106.73552)" fill="#ebcd73"/><path d="M176.2 193.23v-80.08a10.73 10.73 0 00-10.73-10.73h0a10.73 10.73 0 00-10.73 10.73v6a10.73 10.73 0 0010.73 10.73h18.52" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2.20521"/><path d="M192 193.23v-80.08a10.72 10.72 0 0110.72-10.73h0a10.72 10.72 0 0110.73 10.73v6a10.72 10.72 0 01-10.73 10.73h-19.94" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2.20521"/><path d="M138.5 66.42a60.47 60.47 0 0118.5-15.2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="13.1376"/><path d="M126.24 116.77a60.41 60.41 0 01-1.24-12.34M245.39 104.43a60.2 60.2 0 01-2.22 16.28" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="9.03208"/><path fill="none" stroke="#262525" stroke-miterlimit="10" stroke-width=".99051" d="M0 252.65h362.51M60.25 270.09H161"/><path d="M368.59 164.53h-16.76a2 2 0 01-2-2 2 2 0 012-2h16.75a2 2 0 012 2 2 2 0 01-1.99 2zM68.37 29.53H34.11a2 2 0 01-2-2 2 2 0 012-2h34.26a2 2 0 012 2 2 2 0 01-2 2z" fill="#afd5f1"/><rect x="328.27" y="28.2" width="6.24" height="6.04" rx="1.52" transform="rotate(-.08 329.43068 28.87789)" fill="#afd5f1"/><rect x="3.07" y="153.87" width="6.24" height="6.04" rx="1.52" transform="rotate(-.08 7.05197 157.56837)" fill="#afd5f1"/><rect x="82.12" y="122.87" width="5.48" height="5.31" rx="1.34" transform="rotate(-.08 78.69668 121.80851)" fill="#fff"/><path d="M192.5 15.77h-16.69a2 2 0 01-2-2 2 2 0 012-2h16.69a2 2 0 012 2 2 2 0 01-2 2z" fill="#fff"/><path d="M353.28 96.77h-15.89a3.84 3.84 0 01-3.85-3.84 3.84 3.84 0 013.85-3.84h15.89a3.84 3.84 0 013.84 3.84 3.84 3.84 0 01-3.84 3.84z" fill="#da9a9a"/><path d="M342.1 92.94a1 1 0 11-1-1 1 1 0 011 1zM346.31 92.93a1 1 0 01-1 1 1 1 0 010-2 1 1 0 011 1zM350.53 92.91a1 1 0 01-1 1 1 1 0 010-2 1 1 0 011 1z" fill="#fff"/><circle cx="55.85" cy="76.92" r="14.1" fill="#41599e"/><path d="M60.64 73.29a2.92 2.92 0 00-4.14 0l-.74.76-.76-.71a2.92 2.92 0 10-4.1 4.17l2.84 2.8a2.78 2.78 0 001.6.8 2.92 2.92 0 002.54-.84l2.8-2.86a2.92 2.92 0 00-.04-4.12z" fill="#fff"/><path d="M265.25 17H293a3.35 3.35 0 013.35 3.35v23.96a3.35 3.35 0 01-3.35 3.35h-26.8a4.29 4.29 0 01-4.29-4.29v-23a3.35 3.35 0 013.34-3.37z" fill="#6094cb"/><path d="M276.28 39c2.92 0 5.88.09 8.56-.1.85-.06 1.59-1.41.56-1.83a1.94 1.94 0 001.06-.93.91.91 0 00-.52-1.21c1 .25 1.42-1.35.63-1.87a2.38 2.38 0 00.85-1.37 1.37 1.37 0 00-.61-1.42 2.24 2.24 0 00-1.06-.18h-3.64a8.44 8.44 0 00-.54-5.64c-.29-.51-1.08-1.11-1.7-.72s-.42 1.26-.39 1.83a6.41 6.41 0 01-3.31 5.86s.14 4.96.11 7.58zM270.8 31.34h4.42v7.6h-4.42z" fill="#fcfbfb"/><path d="M329.16 253.05a1.4 1.4 0 01-1.3-.91l-37.62-103.31-37.63 103.31a1.38 1.38 0 11-2.6-.94l38.93-106.89a1.38 1.38 0 012.6 0l38.92 106.89a1.38 1.38 0 01-.83 1.77 1.26 1.26 0 01-.47.08z" fill="#354f92"/><path d="M294.72 158.49h-20.48a1.38 1.38 0 110-2.76h20.48a1.38 1.38 0 110 2.76zM300 173.56h-19.52a1.38 1.38 0 110-2.76H300a1.38 1.38 0 010 2.76z" fill="#354f92"/><path d="M278.32 173.56h-18.7a1.38 1.38 0 010-2.76h18.7a1.38 1.38 0 010 2.76zM305.27 188.64h-19.52a1.39 1.39 0 010-2.77h19.52a1.39 1.39 0 010 2.77zM274.24 188.64h-19.52a1.39 1.39 0 010-2.77h19.52a1.39 1.39 0 010 2.77zM310.54 203.71H291a1.39 1.39 0 010-2.77h19.52a1.39 1.39 0 010 2.77zM268.5 203.71H249a1.39 1.39 0 010-2.77h19.5a1.39 1.39 0 110 2.77zM315.81 218.78h-19.52a1.38 1.38 0 010-2.76h19.52a1.38 1.38 0 110 2.76zM263.21 218.78h-19.52a1.38 1.38 0 110-2.76h19.52a1.38 1.38 0 010 2.76zM321.09 233.85h-19.52a1.38 1.38 0 110-2.76h19.52a1.38 1.38 0 110 2.76zM257.78 233.85h-19.52a1.38 1.38 0 010-2.76h19.52a1.38 1.38 0 010 2.76zM290.14 146.17h-20.49a1.39 1.39 0 010-2.77h20.49a1.39 1.39 0 010 2.77z" fill="#354f92"/><path fill="#c3845c" d="M296.29 211.04l.63-11.08 5.94.78-1.17 11.64-5.69-1.01.29-.33z"/><path d="M302.52 209.55s-4 2.06-6.23-1l-10.79 5.8 18.49-.11z" fill="#070308"/><path fill="#a098a2" d="M285.49078 214.36187l18.48963-.11618.0105 1.66997-18.48964.11618z"/><path d="M302.7 136.85s-5.34 3.15-6 20.76-1.7 47.17-1.7 47.17h9l4.62-57.37-1.21-10.56z" fill="#e1b846"/><path fill="#c3845c" d="M311.82 211.04l-.59-11.08 5.95.78.04 11.64-5.68-1.01.28-.33z"/><path d="M318.05 209.55s-4 2.06-6.22-1l-10.8 5.8 18.49-.11z" fill="#070308"/><path fill="#a098a2" d="M301.02047 214.3643l18.48964-.11618.0105 1.66996-18.48964.11618z"/><path d="M314.89 139.13s5.4 6.25 4.6 17.19l-.26 48.58-10.23-.26-3.24-66.13z" fill="#e1b846"/><path fill="none" stroke="#d1a73e" stroke-miterlimit="10" stroke-width=".75" d="M307.06 167.23l-.57-14.08-3.87-5.37"/><path d="M269.24 117.07l11.5 10.93a3.14 3.14 0 004.92-.78l1.11-2-15.55-11.32z" fill="#c3845c"/><path d="M271.48 115.54a3.51 3.51 0 11-2.26-4.43 3.52 3.52 0 012.26 4.43z" fill="#c3845c"/><path d="M269 111.06l-3.23-2a.6.6 0 00-.83.12.5.5 0 00.07.7l3.07 2.73zM282.51 123l14.81-5.47-.7 7s-8 3.47-13 4.26-1.11-5.79-1.11-5.79z" fill="#c3845c"/><path d="M301.19 117.27s-1.36-2.11-4.86-.64-9.92 3.63-9.92 3.63l5.59 9.54 10.54-4z" fill="#6094cb"/><path d="M315.3 115.16l-7.82-.75-9.8 1.8s-.65 14.1 1 21.35a2.61 2.61 0 002.74 2.05l14 .2a5.5 5.5 0 002-4.29l-1-19.22a1.2 1.2 0 00-1.12-1.14z" fill="#6094cb"/><path fill="none" stroke="#558bbf" stroke-miterlimit="10" stroke-width=".75" d="M297.2 127.4l-.48-5.39"/><path d="M339.22 148.73L293.64 144a1.85 1.85 0 01-1.66-2l.55-5.49a1.85 1.85 0 012-1.66l45.57 4.75a1.86 1.86 0 011.67 2l-.55 5.49a1.85 1.85 0 01-2 1.64z" fill="#41599e"/><path d="M326.54 139.37a33.08 33.08 0 011.79-3.39l-5.12-10.58c-.71-2.11-5.17-9.44-7-8.16-1.34.93-.47 9.15.24 10.63l5.44 10.37z" fill="#c3845c"/><path d="M314.54 115.07s4.5.33 6.24 3.07c2.22 3.48 6 9.1 6 9.1l-11.5 4.31z" fill="#6094cb"/><path fill="none" stroke="#558bbf" stroke-miterlimit="10" stroke-width=".75" d="M316.89 130.96l-4.3-7.39"/><path d="M323.29 134l-12.55 9.07 2 2.93 13.6-5.89a3.42 3.42 0 001.22-5.38 3.42 3.42 0 00-4.27-.73z" fill="#c3845c"/><path d="M313.09 145.58s-1.7 4.06-4.92 3.66c-3.72-.47-4-3.42-2.34-4l2.51.18a2.78 2.78 0 011.61-2.32 3.79 3.79 0 011.34-.3z" fill="#c3845c"/><path d="M310.52 142.9l-3.47.63a.49.49 0 00-.39.48.5.5 0 00.45.5l3.35.28z" fill="#c3845c"/><path d="M296.22 104.25a15.61 15.61 0 002.3-2.9l1.05-2.68 3.32.91-1.61 3.3-.91.63 6.7 7.8s-4.85 4.69-9.53 1.73c-3.94-2.49-3.3-7.12-1.32-8.79z" fill="#232132"/><path d="M314.54 100.44a6.15 6.15 0 002.43 3.81c2 1.36 2.62 6.3-1.32 8.79-4.68 3-9.53-1.73-9.53-1.73z" fill="#232132"/><path d="M301.33 96s9.41-4 12.67 2.2c1.88 3.67-.37 10.09-5 11.93-4.4 1.74-3.15-12.62-3.15-12.62z" fill="#232132"/><path d="M302.52 104.85a2.16 2.16 0 11-2.33-2 2.15 2.15 0 012.33 2z" fill="#af6b48"/><path d="M303.19 110.87l.37 4.68a2.33 2.33 0 002.82 2.31 2.62 2.62 0 002.67-2.32l-.93-7.34z" fill="#c3845c"/><path fill="#af6b48" d="M303.45 114.25l5.4-4.92-5.71 1.06.31 3.86z"/><path d="M304.63 111.61c-2.77 0-5.09-2.1-5.2-4.36l-.24-5.33a5.26 5.26 0 014.8-5.51c2.9-.24 5.94 1.86 6.19 4.76l.15 4.29a6 6 0 01-5.7 6.15z" fill="#c3845c"/><path d="M309.48 105a4.11 4.11 0 00-1.83-2.87c-1.61-.94-6-2.32-5.58-5.74 0 0 6.84-2 9.37 2.47s-1.96 6.14-1.96 6.14z" fill="#232132"/><path d="M313 105a2.15 2.15 0 11-2.33-2 2.15 2.15 0 012.33 2z" fill="#c3845c"/><path d="M303.88 96.36s-.5 2.81-4.85 4.69c0 0-1.08-2 1.81-4.74a1.47 1.47 0 011-.39h3.36z" fill="#232132"/><path d="M311.33 114.76l-4.33-.46-5.77 1.26s0 4.15 4.69 3.87a5.82 5.82 0 005.41-4.67z" fill="#c3845c"/><path d="M308.39 253.05a1.38 1.38 0 01-1.3-.91l-37.63-103.31-37.62 103.31a1.38 1.38 0 11-2.6-.94l38.92-106.89a1.38 1.38 0 012.6 0l38.93 106.89a1.38 1.38 0 01-.83 1.77 1.26 1.26 0 01-.47.08z" fill="#6094cb"/><path fill="#e5b699" d="M57.49 234.26l-.77 11.39-5.25-.22.18-11.54 5.84.37z"/><path d="M57.11 244.39l9.57 4.36a1.52 1.52 0 01.79 1.7H50.6l.62-6.13z" fill="#070308"/><path fill="#bdb6bf" d="M67.69 252.27H50.3v-1.82h17.39z"/><path fill="#e5b699" d="M40.4 234.26l-.77 11.39-5.25-.22.18-11.54 5.84.37z"/><path d="M40 244.39l9.56 4.36a1.52 1.52 0 01.8 1.7H33.5l.63-6.13z" fill="#070308"/><path fill="#bdb6bf" d="M50.59 252.27H33.2v-1.82h17.39z"/><path fill="#41599e" d="M54.46 180.76l-20.14 1.53-2.67 56.58h11.03l3.58-42.67 4.78 18.23-1.63 25.13 9.4.03 3.24-27.79-7.59-31.04z"/><path fill="none" stroke="#33559a" stroke-miterlimit="10" stroke-width=".75" d="M50.76 193.74l-4.5 2.46"/><path fill="#dea59a" d="M54.2 163.5l-.13 5.55 3.15.04-.23-5.98-2.79.39z"/><path d="M54.39 154.07s5.06 3 4.33 12.51L54 165.53z" fill="#da9a9a"/><path d="M44.24 150.94a43.86 43.86 0 00-10.82 1.75l.22 32.25 21.41-1.65-.22-28.2a1.38 1.38 0 00-.72-1.19l-5.92-2.53s-2.92-.43-3.95-.43z" fill="#da9a9a"/><path fill="none" stroke="#cd8988" stroke-miterlimit="10" stroke-width=".75" d="M54.9 165.72v-6.22"/><path d="M36 163.56l-1.38 15.95s-1.52 3.21-4.21-.13S30 163 30 163z" fill="#e5b699"/><path d="M36.67 166.91s1.74-13.55-2-14.24-7.51 8.41-7.51 16z" fill="#da9a9a"/><path fill="none" stroke="#cd8988" stroke-miterlimit="10" stroke-width=".75" d="M35.65 167l1.43-.42.27-6.4"/><path d="M45.1 164.58a4.37 4.37 0 013.59-3.09c2.82-.27 3.65 1.94 3.12 3.39s-2.36 3.82-5.14 2.61-1.57-2.91-1.57-2.91z" fill="#e5b699"/><path d="M49.63 161.49a17.64 17.64 0 014.82 1.32.56.56 0 01.29.57.54.54 0 01-.64.46l-3.82-.71zM33.99 180.32l12.68-12.83-1.57-2.91-12.34 7.84 1.23 7.9z" fill="#e5b699"/><path fill="none" stroke="#d6a485" stroke-miterlimit="10" stroke-width=".48254" d="M35.33 170.78l-2.57 1.64"/><path d="M62.43 167.8l-5.34 15.84a1.18 1.18 0 01-1.29.81l-13-1.7a1.2 1.2 0 01-1-1.59l5.49-15.82a1.19 1.19 0 011.29-.79l12.81 1.68a1.2 1.2 0 011.04 1.57z" fill="#131314"/><path fill="#131314" d="M62.2 166.63l.68.88-20.21 15.6-.72-.95 20.25-15.53z"/><path d="M63 168.59l-5.3 15.84a1.2 1.2 0 01-1.29.81l-13-1.71a1.19 1.19 0 01-1-1.58L48 166.13a1.21 1.21 0 011.29-.8L62.05 167a1.21 1.21 0 01.95 1.59z" fill="#445057"/><path d="M62.43 173.19l-1.21 3.28a.92.92 0 01-1 .59 2 2 0 01-1.67-2.61l.35-1.1a2 2 0 012-1.42h.68a.91.91 0 01.85 1.26zM48.91 146.15l-.64 5.2a2.56 2.56 0 01-3.17 2.43c-1.48-.2-3-1.13-2.76-2.73l.77-8.16z" fill="#e5b699"/><path d="M48.32 150.94s-5.86-2.12-5.36-7.37c.14-1.56 6 2.35 6 2.35z" fill="#d6a485"/><path d="M49.57 152l-2.52-1.18-4.46.13-2.61.37s-1 3.91 5.63 4.13c5.28.13 3.96-3.45 3.96-3.45z" fill="#e5b699"/><path d="M52.4 139.4s5.08-3.79 2.76-7.29-6.54-.47-6.54-.47zM48.32 130.71s-14.32-2-8 9.06l1.63-4.5z" fill="#1e2325"/><path d="M52.67 133.74s2.4 2-.61 6.4l-.8-5.62z" fill="#1e2325"/><path d="M50 141.44a2.13 2.13 0 102.37-1.93 2.17 2.17 0 00-2.37 1.93z" fill="#cb987b"/><path d="M46.7 148a5.53 5.53 0 005.8-4.69l.41-5.28a5.81 5.81 0 00-5-6.33c-3.13-.38-6.51 1.87-6.88 5.1l-.27 4.12A6.59 6.59 0 0046.7 148z" fill="#e5b699"/><path d="M52.93 136.75s.2-1.38-2.52-1.72-6.23-.11-8.17 2.32v3.81l-2.43-2.4 1.28-5.68 7.27-2.37 4.35 3z" fill="#1e2325"/><path d="M38 140.66a2.11 2.11 0 102.34-1.91 2.13 2.13 0 00-2.34 1.91z" fill="#e5b699"/><path d="M50.47 131.81s.65-1.66-1.63-2.58c-2-.79-4-.45-8.37 2.51zM52 145.61a.86.86 0 00-.52-.78 8.91 8.91 0 00-2.21-.61 12 12 0 00-4.24.48 1 1 0 01-1.11-.5 12 12 0 01-1-8.23l-1.52 1.1.2 2.33s1.18 2.52-.67 3.64c0 0-.09 5.21 4.75 6.15a7.14 7.14 0 004.27-.57 3.49 3.49 0 002.05-3.01z" fill="#1e2325"/><path d="M42.37 138.48a2.71 2.71 0 002-3.84c-1.23-3.1-2.72.84-2.72.84z" fill="#1e2325"/><path fill="#e5b699" d="M84.22 254.74l5.1-8.11 6 3.04-6.15 9.44-4.82-2.17-.13-2.2z"/><path d="M84.12 254.11s2.93 4.73 6.85 3.44l4.49 11.2-15.8-11.42z" fill="#070308"/><path fill="#bdb6bf" d="M78.66277 258.72086l.99612-1.3776 15.79369 11.42013-.99611 1.3776z"/><path fill="#41599e" d="M100.86 206.14l-6.15 26.08-10.35 17.37 9.83 5.7 12.43-22.12 4.11-16.67-9.87-10.36z"/><path fill="#5371b0" d="M94.22 255.83l-10.61-6.29 3.05-5.03 10.59 6.67-3.03 4.65z"/><path fill="#e5b699" d="M131.62 262.72l-3.85-8.77 5.88-3.26 4.36 10.39-4.51 2.77-1.88-1.13z"/><path d="M131 262.45s5.56.23 6.69-3.73l11.79 2.55-18.24 6.51z" fill="#070308"/><path fill="#bdb6bf" d="M131.22115 267.92668l18.32167-6.67578.582 1.59727-18.32168 6.67579z"/><path d="M112.76 199v5.92L128.33 229l9.74 26.34-9.53 3.81-9.83-24.15-18.58-24s-6.25-8.09 1.24-15.2z" fill="#41599e"/><path fill="none" stroke="#33559a" stroke-miterlimit="10" stroke-width=".75" d="M109.2 222.72l-9.39-12.11"/><path fill="#5371b0" d="M138.8 255.04l-11.08 4.56-2.12-5.49 11.37-4.31 1.83 5.24z"/><path d="M113.86 177.63l7.23 5.27 8.72-11.17 2.7 1.48s-3.24 11-7.55 16.56a2.76 2.76 0 01-3.2.86 44 44 0 01-12.09-7.63z" fill="#d6a485"/><path d="M116 179.21l-5.47 9.12-5.37-4.13a5.29 5.29 0 01-1.19-7.09 5.26 5.26 0 017.68-1.41z" fill="#d1a93b"/><path d="M111.68 175.7l-8.55-2.95s-7.34 6.56-1.76 23.08l11.39 3.17a73.62 73.62 0 001.08-9.93c4.34-6.07-2.16-13.37-2.16-13.37z" fill="#dfb945"/><rect x="127.38" y="154.23" width="31.66" height="31.25" rx="4.95" fill="#6094cb"/><path d="M149.24 168.67l-1-.17a5.08 5.08 0 00-.52-1.25l.59-.83a.76.76 0 00-.09-1l-.6-.6a.76.76 0 00-1-.07l-.83.58a5.05 5.05 0 00-1.25-.51l-.17-1a.75.75 0 00-.74-.63h-.86a.76.76 0 00-.76.63l-.18 1a5.18 5.18 0 00-1.24.52l-.83-.56a.76.76 0 00-1 .09l-.6.59a.77.77 0 00-.09 1l.58.83a5.15 5.15 0 00-.51 1.24l-1 .18a.76.76 0 00-.64.76v.84a.76.76 0 00.64.76l1 .18a5.15 5.15 0 00.51 1.24l-.58.83a.77.77 0 00.09 1l.6.6a.76.76 0 001 .08l.83-.58a5.5 5.5 0 001.25.52l.17 1a.76.76 0 00.76.64h.86a.78.78 0 00.76-.64l.17-1a5.08 5.08 0 001.25-.52l.81.57a.76.76 0 001-.09l.6-.6a.76.76 0 00.09-1l-.59-.84a5.18 5.18 0 00.52-1.24l1-.18a.76.76 0 00.64-.75v-.85a.78.78 0 00-.64-.77zm-6 3.47a2.29 2.29 0 112.29-2.29 2.29 2.29 0 01-2.32 2.29z" fill="#fff"/><path d="M111.93 180.75l6.28 7.6 10.64-9.35 2.24 2.1s-5.86 9.86-11.42 14.18a2.76 2.76 0 01-3.31 0 44.11 44.11 0 01-9.82-10.4z" fill="#e5b699"/><path d="M136.63 175.82a.48.48 0 00-.59-.06l-1.57 1-.12-.09L136 175a.5.5 0 000-.7.57.57 0 00-.78 0l-1.83 1.64-.17-.13 1.73-2.39a.44.44 0 00-.07-.6.52.52 0 00-.72.05l-2 2.15-.19-.15 1.09-2a.45.45 0 00-.15-.6.53.53 0 00-.72.16l-1.12 1.76s-.4.92-.87 1.91l-.32-1.74a.44.44 0 00-.35-.35.47.47 0 00-.56.41c-.08 1.1 0 4.36-.16 4.58l2.24 2.1 4.34-3.59 1.17-1.1a.41.41 0 00.07-.59z" fill="#e5b699"/><path d="M113.75 182.72l-7.67 7.57-4.17-5.29a5.27 5.27 0 01.61-7.15 5.27 5.27 0 017.78.75z" fill="#e1b846"/><path fill="none" stroke="#d1a73e" stroke-miterlimit="10" stroke-width=".75" d="M108.75 187.82l-2.67 2.47-4.17-5.34M113.75 182.72l-4-4.8"/><path d="M110.64 164.83l4.22-1.08c2.89 1.69 3.34 6.41 3.34 6.41h-7.35z" fill="#1e2325"/><path fill="#e5b699" d="M112.07 167.98l-2.28 6.77-6.19-2.52 3.43-10.17 5.04 5.92z"/><path d="M110.73 172c0-.12-1.16-4.22-1.16-4.22l2.57 1.18z" fill="#d6a485"/><path d="M113.91 153.92s3.21.53 3.39 4.58c0 0 .09 2.93.19 7.15a3.49 3.49 0 01-4.14 3.55 10.43 10.43 0 01-4.14-1.86l-1.86-1.75c-4.34-4.85-.36-12.62 6.09-11.75z" fill="#e5b699"/><path d="M117 162.7l1.46 1.39a.33.33 0 01-.19.56l-1.46.15z" fill="#e5b699"/><path d="M109.63 161.16s-1.91-9.82 6.57-5.82c0 0-3.28-5.37-10.74-2.12a6.49 6.49 0 00-3.48 4.26c-.47 2.72 1 5 3.46 9.3l2.84-3.3a11.92 11.92 0 011.35-2.32z" fill="#1e2325"/><path d="M106.9 158.28l1.7 4.05c10.86-3.39 5.91-8.47 5.91-8.47s-8.78-2.61-7.61 4.42z" fill="#1e2325"/><path fill="#1e2325" d="M112.36 160.22l-1.53 2.27-1.91-2.66 3.44.39zM112.94 154.39s3.72.62 4.26 3.21c0 0 2.93-3-3.13-4.28-3.6-.75-1.13 1.07-1.13 1.07zM109 163.48s-.7 4.93-.23 6.68l-9.1-.49a17.52 17.52 0 001.82-5.67c.11-1.95-.88-6.4 2.13-9.42l1.5 5.84z"/><path d="M106.61 162.5a2.15 2.15 0 102.31-2 2.14 2.14 0 00-2.31 2zM103.13 172.75a12.57 12.57 0 008.55 2.95l-3.68-4.39-3.62-.76z" fill="#e5b699"/></svg>
+        </div>
+    </div>
+</main>
+
+    <div class="container px-6 pt-8 pb-20 mx-auto sm:pt-16">
+        <div class="flex flex-col w-full mb-16 sm:flex-row sm:mb-32">
+            <div class="relative sm:w-1/3">
+                <span class="absolute top-0 left-0 text-6xl font-black text-gray-200">1</span>
+                <div class="relative z-10 flex flex-col mt-8 ml-6">
+                    <h4 class="font-bold leading-none text-gray-400 uppercase font-xs">Getting started</h4>
+                    <p class="mt-2 text-3xl leading-none text-gray-800">Lorem ipsum dolor</p>
+                    <a href="#" class="mt-2 text-blue-500">See more</a>
                 </div>
-            @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
+            </div>
+            <div class="relative sm:w-1/3">
+                <span class="absolute top-0 left-0 text-6xl font-black text-gray-200">2</span>
+                <div class="relative z-10 flex flex-col mt-8 ml-6">
+                    <h4 class="font-bold leading-none text-gray-400 uppercase font-xs">Getting started</h4>
+                    <p class="mt-2 text-3xl leading-none text-gray-800">Lorem ipsum dolor</p>
+                    <a href="#" class="mt-2 text-blue-500">See more</a>
                 </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
+            </div>
+            <div class="relative sm:w-1/3">
+                <span class="absolute top-0 left-0 text-6xl font-black text-gray-200">3</span>
+                <div class="relative z-10 flex flex-col mt-8 ml-6">
+                    <h4 class="font-bold leading-none text-gray-400 uppercase font-xs">Getting started</h4>
+                    <p class="mt-2 text-3xl leading-none text-gray-800">Lorem ipsum dolor</p>
+                    <a href="#" class="mt-2 text-blue-500">See more</a>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+        <div class="flex flex-col sm:px-12 sm:flex-row">
+            <div class="sm:w-1/2 sm:pr-16">
+                <img src="http://placehold.it/552x300" class="rounded-lg">
+            </div>
+            <div class="pt-4 sm:w-1/2">
+                <h3 class="mb-4 text-2xl text-gray-800">
+                    Lorem ipsum dolor sit amet.
+                </h3>
+                <p class="mb-4 text-lg leading-relaxed text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                    at ipsum eu nunc commodo posuere et sit amet ligula.
+                </p>
+                <button class="px-8 py-2 mx-auto text-white bg-blue-600 rounded shadow-lg hover:bg-blue-500">
+                    Action
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="py-20 bg-gray-100">
+        <div class="container flex flex-col items-center px-6 mx-auto">
+            <h3 class="mb-4 text-4xl font-bold text-center text-gray-800">Lorem ipsum dolor sit amet</h3>
+            <p class="mb-8 text-lg leading-relaxed text-center text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                at ipsum eu nunc commodo posuere et sit amet ligula.
+            </p>
+            <button class="px-8 py-3 mx-auto text-xl text-white bg-blue-600 rounded shadow-lg hover:bg-blue-500">
+                Action
+            </button>
+        </div>
+    </div>
+    <footer class="pt-16 bg-gray-800">
+        <div class="container px-6 mx-auto">
+            <div class="flex flex-col items-center justify-end sm:flex-row">
+                <div class="sm:w-2/3">
+                    <h4 class="text-3xl leading-tight text-center text-white sm:text-left">Nulla mollis, odio ac imperdiet <br class="hidden sm:block"> aliquet, nulla <span class="font-bold underline">ante vulputate elit</span></h4>
+                </div>
+                <div class="flex justify-end mt-12 sm:w-1/3 sm:mt-0">
+                    <button class="px-8 py-3 text-xl text-white bg-blue-600 rounded shadow-lg hover:bg-blue-500">Contact us</button>
+                </div>
+            </div>
+            <div class="flex justify-center py-10 mt-16 mb-8 border-t border-gray-700 sm:justify-end">
+                <a href="#" class="mx-2 text-white">Home</a>
+                <a href="#" class="mx-2 text-white">Link1</a>
+                <a href="#" class="mx-2 text-white">Link2</a>
+                <a href="#" class="mx-2 text-white">Link3</a>
+                <a href="#" class="mx-2 text-white">Link4</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</x-front-guest-layout>

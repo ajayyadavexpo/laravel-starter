@@ -32144,6 +32144,11 @@ select {
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
 
+#FileUpload.active {
+  box-shadow: 0 0 0 3px rgba(164, 202, 254, 0.45);
+  border-color: #a4cafe;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -188583,3 +188588,4 @@ select {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
