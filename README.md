@@ -9,11 +9,11 @@
 
 # Admin Login page
 
-![alt text](https://github.com/AjayYadavAi/laravel-starter/blob/main/admin-login.png?raw=true)
+![alt text](https://github.com/ajayyadavexpo/laravel-starter/blob/main/admin-login.png?raw=true)
 
 # Admin Dashboard page
 
-![alt text](https://github.com/AjayYadavAi/laravel-starter/blob/main/admin-dashboard.png?raw=true)
+![alt text](https://github.com/ajayyadavexpo/laravel-starter/blob/main/admin-dashboard.png?raw=true)
 
 
 
